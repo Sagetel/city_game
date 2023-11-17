@@ -103,7 +103,7 @@ function GameProcess({ messages, addNewMessage, userMove, setUserMove, usedCityM
         <div className="text-gray-400 self-center">Всего перечислено городов: {usedCityMapSize}</div>
       </div>
       <div className="p-4">
-        <div className="bg-gray-100 py-3.5 px-3 rounded-md flex relative pr-12">
+        <div className="bg-gray-100 py-2 px-3 rounded-md flex relative items-center">
           <input ref={inputRef} className={clsx("bg-gray-100 w-full placeholder:text-gray-700 p-0 text-base focus:outline-none focus:border-none max-h-fit", (userMove ? "text-gray-700" : "text-gray-400"))}
             type="text"
             placeholder={
@@ -117,12 +117,12 @@ function GameProcess({ messages, addNewMessage, userMove, setUserMove, usedCityM
             onKeyPress={handleKeyPress}
 
           />
-          <div className={clsx("pt-1 pb-2 pl-2 pr-1 rounded-md flex justify-center items-center absolute right-2.5 top-2.5", (userMove ? 'cursor-pointer bg-violet-500' : 'bg-gray-400'))}
+          <div className={clsx("pt-0.75 pb-1.5 pl-1.5 pr-0.5 sm:pt-1 sm:pb-2 sm:pl-2 sm:pr-1 md:pt-1 md:pb-1.25 md:pl-1.5 md:pr-0.75 lg:pl-1.25 lg:pt-0.75 h-fit rounded-md flex justify-center items-center ml-3.5", (userMove ? 'cursor-pointer bg-violet-500' : 'bg-gray-400'))}
             onClick={() => { sendNewMessage() }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+            <svg class="w-15 h-15 sm:w-4 sm:h-4" xmlns="http://www.w3.org/2000/svg"
+              width="8"
+              height="8"
               viewBox="0 0 20 20"
               fill="none"
               transform="rotate(45)">
