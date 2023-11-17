@@ -92,7 +92,7 @@ function GameProcess({ messages, addNewMessage, userMove, setUserMove, usedCityM
   }, [userMove]);
   return (
     <div className="flex flex-col" >
-      <div className="min-h-[20rem] max-h-[25.313rem] px-6 flex flex-col justify-between">
+      <div className="min-h-[20rem] max-h-[25.313rem] sm:min-h-[20rem] sm:max-h-[25.313rem] md:min-h-[50rem] px-6 flex flex-col justify-between">
         <div ref={messagesContainerRef} className={clsx('flex flex-col gap-13 overflow-y-auto', (messages.length == 0 && 'm-auto'))}>
           {messages.length == 0 ? <div className='text-gray-400'>Первый участник вспоминает города...</div> : messages.map((message, index) => (
             <div key={index} className={clsx('py-1.5 px-4 rounded-tl-xl rounded-tr-xl w-fit first:mt-13', (message.isUser ? "bg-violet-500 rounded-br-0 rounded-bl-xl self-end text-white" : 'bg-violet-50 rounded-br-xl rounded-bl-0 text-gray-700'))}>
